@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adobe Analytics Demo Site</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Adobe Data Layer -->
+  <script>
+    window.adobeDataLayer = window.adobeDataLayer || [];
+    window.adobeDataLayer.push({
+      event: "pageLoad",
+      page: {
+        pageName: "home",
+        siteSection: "demo"
+      }
+    });
+  </script>
+
+  <!-- Header -->
+  <header>
+    <h1>Adobe Analytics Demo</h1>
+    <nav>
+      <a href="#home" class="header-link">Home</a>
+      <a href="#features" class="header-link">Features</a>
+      <a href="#contact" class="header-link">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <section id="home">
+      <h2>Welcome</h2>
+      <p>
+        This demo shows an
+        <a href="https://example.com" target="_blank" class="tracked-link">
+          external link
+        </a>
+        tracked using Adobe Analytics.
+      </p>
+
+      <p>
+        Learn more on our
+        <a href="#features" class="tracked-link">
+          features page
+        </a>.
+      </p>
+    </section>
+
+    <!-- Video -->
+    <section id="features">
+      <h2>Product Video</h2>
+      <video id="promoVideo" width="640" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+        Your browser does not support video.
+      </video>
+    </section>
+
+    <!-- Form -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <nav>
+      <a href="#privacy" class="footer-link">Privacy</a>
+      <a href="#terms" class="footer-link">Terms</a>
+      <a href="#support" class="footer-link">Support</a>
+    </nav>
+    <p>© 2026 Demo Company</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
